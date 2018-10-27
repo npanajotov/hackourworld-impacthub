@@ -9,6 +9,7 @@
 	import Header from './components/layout/Header';
 	import Footer from './components/layout/Footer';
 
+
 	export default {
 		components: {'app-header': Header, 'app-footer': Footer},
 		created() {
