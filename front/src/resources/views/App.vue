@@ -8,10 +8,10 @@
 <script>
 	import Header from './components/layout/Header';
 	import Footer from './components/layout/Footer';
-
+    import Product from './pages/Product';
 
 	export default {
-		components: {'app-header': Header, 'app-footer': Footer},
+		components: {'app-header': Header, 'app-footer': Footer, 'app-products': Product},
 		created() {
 			this.$store.commit('initSocket');
 		},
