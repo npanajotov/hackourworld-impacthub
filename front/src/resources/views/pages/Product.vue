@@ -1,8 +1,18 @@
 <template>
   <div>
-    product
+    <pre>
+   {{item}}
+    </pre>
   </div>
 </template>
 <script>
-	export default {}
+	export default {
+		computed: {
+			item: {
+				get() {
+					return this.$store.getters.product;
+				}
+			}
+		}
+	}
 </script>
