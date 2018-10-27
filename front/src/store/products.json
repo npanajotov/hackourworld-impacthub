@@ -38,7 +38,19 @@
     "made_in": "Serbia"
   },
   {
-    "uid": "1037fa4"
+    "uid": "1037fa4",
+    "name": "Hobby - Hot sticks",
+    "description": "Lorem ipsum",
+    "price": 500,
+    "tags": [
+
+    ],
+    "rating": 4.5,
+    "vegan": false,
+    "gmo": false,
+    "organic": false,
+    "weight": "200g",
+    "made_in": "Serbia"
   },
   {
     "uid": "36431e7e"
