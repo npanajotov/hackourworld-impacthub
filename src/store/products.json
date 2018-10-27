@@ -1,0 +1,61 @@
+[
+  {
+    "uid": 860037034119,
+    "name": "Guarana",
+    "description": "Lorem ipsum",
+    "price": 50,
+    "tags": [
+      "coffein",
+      "water",
+      "taurin",
+      "calcium",
+      "carbon dioxide",
+      "preservative",
+      "E150"
+    ],
+    "rating": 5,
+    "vegan": false,
+    "gmo": false,
+    "organic": false,
+    "weight": "0.25l",
+    "made_in": "Serbia"
+  },
+  {
+    "uid": 8601500115038,
+    "name": "Milk Shake - Kravica",
+    "description": "Lorem ipsum",
+    "price": 60,
+    "tags": [
+      "milk",
+      "sugar",
+      "aromas"
+    ],
+    "rating": 3.9,
+    "vegan": false,
+    "gmo": false,
+    "organic": false,
+    "weight": "0.22l",
+    "made_in": "Serbia"
+  },
+  {
+    "uid": "1037fa4"
+  },
+  {
+    "uid": "36431e7e"
+  },
+  {
+    "uid": "31c024d9"
+  },
+  {
+    "uid": "c7e715a3"
+  },
+  {
+    "uid": "c7e715a3"
+  },
+  {
+    "uid": "40e311bb"
+  },
+  {
+    "uid": "a06fc757"
+  }
+]
