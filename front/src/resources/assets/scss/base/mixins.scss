@@ -1,0 +1,85 @@
+@mixin clearfix() {
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin hoverActiveFocusNone() {
+  &:focus,
+  &:active,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+  }
+}
+
+@mixin borderRadius($size: 10px) {
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  border-radius: $size;
+}
+
+@mixin headerShaddow() {
+  -webkit-box-shadow: 0 6px 15px 0 rgba(86, 131, 136, .25);;
+  -moz-box-shadow: 0 6px 15px 0 rgba(86, 131, 136, .25);;
+  box-shadow: 0 6px 15px 0 rgba(86, 131, 136, .25);
+}
+
+@mixin linkDefaultText() {
+  color: $text-color;
+  @include hoverActiveFocusNone();
+}
+
+@mixin noneHighlight() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin borderedBox() {
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 2px solid $border-color;
+}
+
+@mixin infRotate() {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+@mixin boxShadow($boxShadow) {
+  -moz-box-shadow: $boxShadow;
+  -webkit-box-shadow: $boxShadow;
+  box-shadow: $boxShadow;
+}
+
+@mixin opacity($opacity) {
+  $opacityPercent: $opacity * 100;
+  opacity: $opacity;
+}
+
+@mixin wordWrap($wordWrap: break-word) {
+  -ms-word-wrap: $wordWrap;
+  word-wrap: $wordWrap;
+}
+
+@mixin bgOverlay(){
+  content: "";
+  display: block;
+  position: fixed;
+  padding: 100px 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
