@@ -1,0 +1,69 @@
+//Colors
+$brand-primary: #dd122c;
+//$brand-primary: #0791c9;
+$brand-success: #1c9249;
+$brand-black: #292929;
+$brand-danger: #dd122c;
+$brand-info: #3a85cb;
+$brand-warning: #ff7928;
+$background: #e9e9e9;
+
+// Typography
+$text-color: $brand-black;
+$line-height: 1.42857143;
+$font-size: 14px;
+$font-size-2: 16px;
+$font-size-4: 18px;
+$font-size-6: 20px;
+$font-family: 'Raleway', Helvetica, Arial, sans-serif;
+$font-family-heading: 'Rajdhani', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Border
+$border-color: #ccc;
+$border-size: 1px;
+$border-primary: $border-size solid $border-color;
+
+//Buttons
+
+// Anchors
+$link-color: darken($brand-primary, 20%);
+$link-active-color: darken($brand-primary, 20%);
+
+@font-face {
+  font-family: "SkodaRegular";
+  src: url("/static/fonts/amag/SKODANext-Regular.ttf") format("ttf"),
+  url("/static/fonts/amag/SKODANext-Regular.woff2") format("woff2"),
+  url("/static/fonts/amag/SKODANext-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "SkodaBlack";
+  src: url("/static/fonts/amag/SKODANext-Black.ttf") format("ttf"),
+  url("/static/fonts/amag/SKODANext-Black.woff2") format("woff2"),
+  url("/static/fonts/amag/SKODANext-Black.otf") format("otf");
+}
+
+@font-face {
+  font-family: "SkodaBold";
+  src: url("/static/fonts/amag/SKODANext-Bold.ttf") format("ttf"),
+  url("/static/fonts/amag/SKODANext-Bold.woff2") format("woff2"),
+  url("/static/fonts/amag/SKODANext-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/static/fonts/axpert/OpenSans-Regular.ttf") format("ttf"),
+  url("/static/fonts/axpert/OpenSans-Regular.woff") format("woff"),
+  url("/static/fonts/axpert/OpenSans-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/static/fonts/axpert/OpenSans-Bold.woff") format("woff"),
+  url("/static/fonts/axpert/OpenSans-Bold.ttf") format("ttf"),
+  url("/static/fonts/axpert/OpenSans-Bold.otf") format("otf");
+}
