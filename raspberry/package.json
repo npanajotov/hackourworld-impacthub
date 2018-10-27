@@ -1,0 +1,16 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mfrc522-rpi": "^1.1.0",
+    "serialport": "^7.0.2",
+    "ws": "^6.1.0"
+  }
+}
