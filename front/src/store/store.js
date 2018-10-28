@@ -24,7 +24,8 @@ export default new Vuex.Store({
 						"calcium",
 						"carbon dioxide",
 						"preservative",
-						"E150"
+						"E150",
+						"plastic"
 					],
 					ingredients: [40, 20, 12, 39, 10],
 					rating: 5,
@@ -41,7 +42,8 @@ export default new Vuex.Store({
 					price: 60,
 					tags: [
 						"sugar",
-						"gluten"
+						"gluten",
+						"honey"
 					],
 					ingredients: [12, 50, 5, 10, 30],
 					rating: 3.9,
@@ -144,7 +146,8 @@ export default new Vuex.Store({
 					age: 25,
 					allergic: [
 						"alcohol",
-						"gluten"
+						"gluten",
+						"coffein"
 					]
 				},
 				{
@@ -182,7 +185,6 @@ export default new Vuex.Store({
 				console.log(response);
 				let id = parseInt(response.data);
 				state.user.item = state.user.list.find(item => item.uid === id);
-				console.log(state.user.item);
 			}
 		},
 

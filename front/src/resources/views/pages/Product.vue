@@ -2,12 +2,9 @@
   <div class="product">
     <div class="left-side">
       <p><strong>This product contains the following allergens:</strong></p>
-      <pre>
-        {{user}}
-      </pre>
       <hr>
       <ul>
-        <li v-if="havePenauts()">
+        <li v-if="havePenauts()" :class="{danger: haveAlergy('penauts')}">
           <div class="alergen-img">
             <img src="/peanut_icon.png" alt="">
           </div>
@@ -16,12 +13,15 @@
             <h4 class="green-text text-uppercase">
               Penauts
             </h4>
-            <p>
+            <p v-if="!haveAlergy('penauts')">
               Be careful if you alergic
+            </p>
+            <p v-else>
+              YOU ARE ALLERGIC
             </p>
           </div>
         </li>
-        <li v-if="haveCoffeine()">
+        <li v-if="haveCoffeine()" :class="{danger: haveAlergy('coffein')}">
           <div class="alergen-img">
             <img src="/coffein_icon.png" alt="">
           </div>
@@ -30,12 +30,15 @@
             <h4 class="green-text text-uppercase">
               Caffeine
             </h4>
-            <p>
+            <p v-if="haveAlergy('coffein')">
               Be careful if you alergic
+            </p>
+            <p v-else>
+              YOU ARE ALLERGIC
             </p>
           </div>
         </li>
-        <li v-if="haveHoney()">
+        <li v-if="haveHoney()" :class="{danger: haveAlergy('honey')}">
           <div class="alergen-img">
             <img src="/honey_icon.png" alt="">
           </div>
@@ -44,12 +47,15 @@
             <h4 class="green-text text-uppercase">
               Honey
             </h4>
-            <p>
+            <p v-if="haveAlergy('honey')">
               Be careful if you alergic
+            </p>
+            <p v-else>
+              YOU ARE ALLERGIC
             </p>
           </div>
         </li>
-        <li v-if="haveGluten()">
+        <li v-if="haveGluten()" :class="{danger: haveAlergy('gluten')}">
           <div class="alergen-img">
             <img src="/gluten_icon.png" alt="">
           </div>
@@ -58,12 +64,15 @@
             <h4 class="green-text text-uppercase">
               Gluten
             </h4>
-            <p>
+            <p v-if="haveAlergy('gluten')">
               Be careful if you alergic
+            </p>
+            <p v-else>
+              YOU ARE ALLERGIC
             </p>
           </div>
         </li>
-        <li v-if="havePlastic()">
+        <li v-if="havePlastic()" :class="{danger: haveAlergy('plastic')}">
           <div class="alergen-img">
             <img src="/plastic_icon.png" alt="">
           </div>
@@ -72,12 +81,15 @@
             <h4 class="green-text text-uppercase">
               Plastic
             </h4>
-            <p>
+            <p v-if="haveAlergy('plastic')">
               Be careful if you alergic
+            </p>
+            <p v-else>
+              YOU ARE ALLERGIC
             </p>
           </div>
         </li>
-        <li v-if="haveAlcohol()">
+        <li v-if="haveAlcohol()" :class="{danger: haveAlergy('alcohol')}">
           <div class="alergen-img">
             <img src="/alcohol_icon.png" alt="">
           </div>
@@ -86,8 +98,11 @@
             <h4 class="green-text text-uppercase">
               Alcohol
             </h4>
-            <p>
+            <p v-if="haveAlergy('alcohol')">
               Be careful if you alergic
+            </p>
+            <p v-else>
+              YOU ARE ALLERGIC
             </p>
           </div>
         </li>
@@ -171,10 +186,20 @@
 			haveAlcohol() {
 				return !!this.item.tags.find(item => item.includes('alcohol'))
 			},
+			haveAlergy(val) {
+
+				if (this.user) {
+					console.log(val);
+					return !!this.user.allergic.find(item => item.includes(val));
+				}
+			}
 		}
 	}
 </script>
 <style lang="scss">
+  .danger {
+    color: red !important;
+  }
 
   ul {
     list-style: none;
