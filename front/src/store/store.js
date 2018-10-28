@@ -1,15 +1,21 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import products from './products';
+import users from './users';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
 	modules: {},
 	state: {
-		socket: '',
+		socketProduct: '',
+		socketUser: '',
 		products: {
 			list: products,
+			item: '',
+		},
+		user: {
+			list: users,
 			item: '',
 		}
 	},
@@ -21,10 +27,16 @@ export default new Vuex.Store({
 	},
 	mutations: {
 		initSocket: (state) => {
-			state.socket = new WebSocket('ws://192.168.55.131:8000');
-			state.socket.onmessage = (response) => {
+			state.socketProduct = new WebSocket('ws://192.168.55.131:8000');
+			state.socketProduct.onmessage = (response) => {
 				console.log(response);
 				state.products.item = parseInt(response.data)
+			};
+
+			state.socketUser = new WebSocket('ws://192.168.55.131:5000');
+			state.socketUser.onmessage = (response) => {
+				console.log(response);
+				state.users.item = parseInt(response.data)
 			}
 		},
 

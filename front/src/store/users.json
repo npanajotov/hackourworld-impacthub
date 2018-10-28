@@ -1,0 +1,27 @@
+[
+  {
+    "uid": 1,
+    "name": "Nikola",
+    "age": 25,
+    "allergic": [
+      "penauts",
+      "glycerin"
+    ]
+  },
+  {
+    "uid": 2,
+    "name": "Mikica",
+    "age": 25,
+    "allergic": [
+      "alcohol"
+    ]
+  },
+  {
+    "uid": 3,
+    "name": "Marija",
+    "age": 25,
+    "allergic": [
+      "coffein"
+    ]
+  }
+]

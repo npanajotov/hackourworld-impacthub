@@ -43,7 +43,6 @@
     "description": "Lorem ipsum",
     "price": 500,
     "tags": [
-
     ],
     "rating": 4.5,
     "vegan": false,
@@ -53,16 +52,40 @@
     "made_in": "Serbia"
   },
   {
-    "uid": "36431e7e"
+    "uid": "36431e7e",
+    "name": "Flips",
+    "description": "Lorem ipsum",
+    "price": 30,
+    "tags": [
+      "penauts"
+    ],
+    "rating": 4.9,
+    "vegan": false,
+    "gmo": false,
+    "organic": false,
+    "weight": "100g",
+    "made_in": "Serbia"
   },
   {
     "uid": "31c024d9"
   },
   {
-    "uid": "c7e715a3"
-  },
-  {
-    "uid": "c7e715a3"
+    "uid": "c7e715a3",
+    "name": "Dove cream",
+    "description": "Lorem ipsum",
+    "price": 250,
+    "tags": [
+      "glycerin",
+      "liquidum",
+      "aqua",
+      "alcohol"
+    ],
+    "rating": 3.9,
+    "vegan": false,
+    "gmo": false,
+    "organic": false,
+    "weight": "75ml",
+    "made_in": "Romania"
   },
   {
     "uid": "40e311bb"
