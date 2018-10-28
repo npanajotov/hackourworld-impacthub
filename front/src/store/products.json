@@ -1,73 +1,88 @@
 [
   {
-    "uid": 8600037034119,
-    "name": "Guarana",
-    "description": "Lorem ipsum",
-    "price": 50,
-    "tags": [
+    uid: "8600037034119",
+    name: "Guarana",
+    description: "Lorem ipsum",
+    price: 51.99,
+    tags: [
       "coffein",
-      "water",
-      "taurin",
-      "calcium",
-      "carbon dioxide",
-      "preservative",
       "E150"
     ],
-    "rating": 5,
-    "vegan": false,
-    "gmo": false,
-    "organic": false,
-    "weight": "0.25l",
-    "made_in": "Serbia"
+    rating: 5,
+    vegan: true,
+    gmo: true,
+    organic: false,
+    weight: "0.25l",
+    made_in: "Serbia"
   },
   {
-    "uid": 8601500115038,
-    "name": "Milk Shake - Kravica",
-    "description": "Lorem ipsum",
-    "price": 60,
-    "tags": [
-      "milk",
+    uid: "8601500115038",
+    name: "Milk Shake - Kravica",
+    description: "Lorem ipsum",
+    price: 60,
+    tags: [
       "sugar",
-      "aromas"
+      "gluten"
     ],
-    "rating": 3.9,
-    "vegan": false,
-    "gmo": false,
-    "organic": false,
-    "weight": "0.22l",
-    "made_in": "Serbia"
+    rating: 3.9,
+    vegan: false,
+    gmo: false,
+    organic: false,
+    weight: "0.22l",
+    made_in: "Serbia"
   },
   {
-    "uid": "1037fa4",
-    "name": "Hobby - Hot sticks",
-    "description": "Lorem ipsum",
-    "price": 500,
-    "tags": [
-
+    uid: "1037fa4",
+    name: "Hobby - Hot sticks",
+    description: "Lofem ipsum",
+    price: 500,
+    tags: [
     ],
-    "rating": 4.5,
-    "vegan": false,
-    "gmo": false,
-    "organic": false,
-    "weight": "200g",
-    "made_in": "Serbia"
+    rating: 4.5,
+    vegan: false,
+    gmo: false,
+    organic: false,
+    weight: "200g",
+    made_in: "Serbia"
   },
   {
-    "uid": "36431e7e"
+    uid: "36431e7e",
+    name: "Flips",
+    description: "Lorem ipsum",
+    price: 30,
+    tags: [
+      "penauts"
+    ],
+    rating: 4.9,
+    vegan: false,
+    gmo: false,
+    organic: false,
+    weight: "100g",
+    made_in: "Serbia"
   },
   {
-    "uid": "31c024d9"
+    uid: "31c024d9"
   },
   {
-    "uid": "c7e715a3"
+    uid: "c7e715a3",
+    name: "Dove cream",
+    description: "Lorem ipsum",
+    price: 250,
+    tags: [
+      "glycerin",
+      "alcohol"
+    ],
+    rating: 3.9,
+    vegan: false,
+    gmo: false,
+    organic: false,
+    weight: "75ml",
+    made_in: "Romania"
   },
   {
-    "uid": "c7e715a3"
+    uid: "40e311bb"
   },
   {
-    "uid": "40e311bb"
-  },
-  {
-    "uid": "a06fc757"
+    uid: "a06fc757"
   }
 ]
