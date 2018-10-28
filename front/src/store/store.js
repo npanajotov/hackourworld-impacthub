@@ -21,9 +21,10 @@ export default new Vuex.Store({
 	},
 	getters: {
 		product: state => {
-			// let item = state.products.list.find(item => item.uid === state.products.item);
-			// return item ? item : null;
-			return state.products.list[0];
+			let item = state.products.list.find(item => item.uid === state.products.item);
+
+			return item ? item : null;
+			// return state.products.list[2];
 		}
 	},
 	mutations: {

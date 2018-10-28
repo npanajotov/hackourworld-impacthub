@@ -183,7 +183,7 @@
   }
 
   .right-side-header, .right-side-content {
-    padding-left: 200px;
+    padding-left: 140px;
     small {
       margin-left: 15px;
       font-size: 16px;
@@ -203,7 +203,7 @@
     canvas {
       /*width: 700px !important;*/
       height: 220px !important;
-      margin-top: -30px;
+      margin-top: -10px;
     }
 
   }
@@ -227,7 +227,7 @@
   }
 
   .right-side-footer-similar-products {
-    padding-left: 200px;
+    padding-left: 140px;
     padding-top: 20px;
     p {
       font-size: 20px;
