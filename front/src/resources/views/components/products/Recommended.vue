@@ -3,7 +3,7 @@
 
     <ul>
       <li>
-        <div><img src="/images/xxx3.png" alt=""></div>
+        <div><img src="/images/c7e715a3.png" alt=""></div>
         <p><strong>Dove Cream
         </strong> <br><span class="grey-title">250 RSD</span></p>
       </li>
