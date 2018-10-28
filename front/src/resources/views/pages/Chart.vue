@@ -4,26 +4,16 @@
 
 	export default {
 		extends: Doughnut,
+		props: ["ingredients"],
 		mounted() {
-			// this.setData();
+			this.setData();
 			this.renderChart(this.datacollection, this.options);
 		},
 		data() {
 			return {
 				datacollection: {
 					labels: ['BILJNA MAST', 'KUKURUZNI GRIZ', 'SKROB', 'KIKIRIKI', 'SAHAROZA'],
-					datasets: [{
-						label: 'GitHub Commits',
-						backgroundColor: [
-							'#EF5030',
-							'#F6AD2A',
-							'#2D3E50',
-							'#158D74',
-							'#0fbd71'
-						],
-						data: [40, 20, 12, 39, 10],
-
-					}]
+					datasets: [],
 				},
 				options: {
 					responsive: true,
@@ -38,6 +28,35 @@
 				},
 			}
 		},
+		methods: {
+			setData() {
+				// this.datacollection.dataset = [{
+				// 	label: 'GitHub Commits',
+				// 	backgroundColor: [
+				// 		'#EF5030',
+				// 		'#F6AD2A',
+				// 		'#2D3E50',
+				// 		'#158D74',
+				// 		'#0fbd71'
+				// 	],
+				// 	data: this.ingredients
+				// 	//[40, 20, 12, 39, 10],
+				//
+				// }];
+				let item = {
+					label: 'GitHub Commits',
+					backgroundColor: [
+						'#EF5030',
+						'#F6AD2A',
+						'#2D3E50',
+						'#158D74',
+						'#0fbd71'
+					],
+					data: this.ingredients
+				};
+				this.datacollection.datasets.push(item);
+			}
+		}
 
 	}
 </script>

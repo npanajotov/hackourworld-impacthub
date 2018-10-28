@@ -2,6 +2,9 @@
   <div class="product">
     <div class="left-side">
       <p><strong>This product contains the following allergens:</strong></p>
+      <pre>
+        {{user}}
+      </pre>
       <hr>
       <ul>
         <li v-if="havePenauts()">
@@ -20,12 +23,12 @@
         </li>
         <li v-if="haveCoffeine()">
           <div class="alergen-img">
-            <img src="/peanut_icon.png" alt="">
+            <img src="/coffein_icon.png" alt="">
           </div>
           <div class="vline"></div>
           <div class="alergen-content">
             <h4 class="green-text text-uppercase">
-              Coffeine
+              Caffeine
             </h4>
             <p>
               Be careful if you alergic
@@ -62,7 +65,7 @@
         </li>
         <li v-if="havePlastic()">
           <div class="alergen-img">
-            <img src="/gluten_icon.png" alt="">
+            <img src="/plastic_icon.png" alt="">
           </div>
           <div class="vline"></div>
           <div class="alergen-content">
@@ -73,9 +76,10 @@
               Be careful if you alergic
             </p>
           </div>
-        </li> <li v-if="haveAlcohol()">
+        </li>
+        <li v-if="haveAlcohol()">
           <div class="alergen-img">
-            <img src="/gluten_icon.png" alt="">
+            <img src="/alcohol_icon.png" alt="">
           </div>
           <div class="vline"></div>
           <div class="alergen-content">
@@ -114,7 +118,7 @@
       <div class="right-side-content">
         <p class="text-uppercase"><strong>Ingredients</strong></p>
         <div class="my-chart">
-          <Chart></Chart>
+          <Chart :key="item.uid" :ingredients="[40, 20, 12, 39, 10]"></Chart>
         </div>
       </div>
 
@@ -138,7 +142,12 @@
 				get() {
 					return this.$store.getters.product;
 				}
-			}
+			},
+			user: {
+				get() {
+					return this.$store.getters.user;
+				}
+			},
 		},
 		methods: {
 			getImg(uid) {

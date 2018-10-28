@@ -26,6 +26,7 @@ export default new Vuex.Store({
 						"preservative",
 						"E150"
 					],
+					ingredients: [40, 20, 12, 39, 10],
 					rating: 5,
 					vegan: false,
 					gmo: false,
@@ -42,6 +43,7 @@ export default new Vuex.Store({
 						"sugar",
 						"gluten"
 					],
+					ingredients: [12, 50, 5, 10, 30],
 					rating: 3.9,
 					vegan: false,
 					gmo: false,
@@ -55,6 +57,7 @@ export default new Vuex.Store({
 					description: "Lofem ipsum",
 					price: 500,
 					tags: ['plastics'],
+					ingredients: [20, 20, 30, 40, 1],
 					rating: 4.5,
 					vegan: false,
 					gmo: false,
@@ -70,6 +73,7 @@ export default new Vuex.Store({
 					tags: [
 						"penauts"
 					],
+					ingredients: [12, 50, 5, 10, 30],
 					rating: 4.9,
 					vegan: false,
 					gmo: false,
@@ -91,6 +95,8 @@ export default new Vuex.Store({
 						"aqua",
 						"alcohol"
 					],
+					ingredients: [30, 10, 10, 30, 20],
+
 					rating: 3.9,
 					vegan: false,
 					gmo: false,
@@ -107,6 +113,7 @@ export default new Vuex.Store({
 						"honey",
 						"sugar",
 					],
+					ingredients: [50, 20, 10, 10, 10],
 					rating: 3.9,
 					vegan: true,
 					gmo: false,
@@ -128,7 +135,7 @@ export default new Vuex.Store({
 					age: 25,
 					allergic: [
 						"penauts",
-						"glycerin"
+						"honey"
 					]
 				},
 				{
@@ -136,7 +143,8 @@ export default new Vuex.Store({
 					name: "Mikica",
 					age: 25,
 					allergic: [
-						"alcohol"
+						"alcohol",
+						"gluten"
 					]
 				},
 				{
@@ -144,7 +152,8 @@ export default new Vuex.Store({
 					name: "Marija",
 					age: 25,
 					allergic: [
-						"coffein"
+						"coffein",
+						"plastics"
 					]
 				}
 			],
@@ -155,6 +164,9 @@ export default new Vuex.Store({
 		product: state => {
 			let data = state.products.list.find(item => item.uid === state.products.item);
 			return data ? data : null;
+		},
+		user: state => {
+			return state.user.item;
 		}
 	},
 	mutations: {
@@ -168,6 +180,9 @@ export default new Vuex.Store({
 			state.socketUser = new WebSocket('ws://192.168.55.131:5000');
 			state.socketUser.onmessage = (response) => {
 				console.log(response);
+				let id = parseInt(response.data);
+				state.user.item = state.user.list.find(item => item.uid === id);
+				console.log(state.user.item);
 			}
 		},
 
