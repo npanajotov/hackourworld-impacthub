@@ -1,49 +1,89 @@
 <template>
   <div class="product">
     <div class="left-side">
-      <p>Ovaj proizvod sadrži sledece alergene:</p>
+      <p><strong>This product contains the following allergens:</strong></p>
       <hr>
-      <p><strong>Alergeni</strong></p>
       <ul>
-        <li>
+        <li v-if="havePenauts()">
           <div class="alergen-img">
-            <img src="../../../../public/peanut_icon.png" alt="">
+            <img src="/peanut_icon.png" alt="">
           </div>
           <div class="vline"></div>
           <div class="alergen-content">
             <h4 class="green-text text-uppercase">
-              Kikiriki
+              Penauts
             </h4>
             <p>
-              Lorem ipsum dolor sit amet.
+              Be careful if you alergic
             </p>
           </div>
         </li>
-        <li>
+        <li v-if="haveCoffeine()">
           <div class="alergen-img">
-            <img src="../../../../public/peanut_icon.png" alt="">
+            <img src="/peanut_icon.png" alt="">
           </div>
           <div class="vline"></div>
           <div class="alergen-content">
             <h4 class="green-text text-uppercase">
-              Kikiriki
+              Coffeine
             </h4>
             <p>
-              Lorem ipsum dolor sit amet.
+              Be careful if you alergic
             </p>
           </div>
         </li>
-        <li>
+        <li v-if="haveHoney()">
           <div class="alergen-img">
-            <img src="../../../../public/peanut_icon.png" alt="">
+            <img src="/honey_icon.png" alt="">
           </div>
           <div class="vline"></div>
           <div class="alergen-content">
             <h4 class="green-text text-uppercase">
-              Kikiriki
+              Honey
             </h4>
             <p>
-              Lorem ipsum dolor sit amet.
+              Be careful if you alergic
+            </p>
+          </div>
+        </li>
+        <li v-if="haveGluten()">
+          <div class="alergen-img">
+            <img src="/gluten_icon.png" alt="">
+          </div>
+          <div class="vline"></div>
+          <div class="alergen-content">
+            <h4 class="green-text text-uppercase">
+              Gluten
+            </h4>
+            <p>
+              Be careful if you alergic
+            </p>
+          </div>
+        </li>
+        <li v-if="havePlastic()">
+          <div class="alergen-img">
+            <img src="/gluten_icon.png" alt="">
+          </div>
+          <div class="vline"></div>
+          <div class="alergen-content">
+            <h4 class="green-text text-uppercase">
+              Plastic
+            </h4>
+            <p>
+              Be careful if you alergic
+            </p>
+          </div>
+        </li> <li v-if="haveAlcohol()">
+          <div class="alergen-img">
+            <img src="/gluten_icon.png" alt="">
+          </div>
+          <div class="vline"></div>
+          <div class="alergen-content">
+            <h4 class="green-text text-uppercase">
+              Alcohol
+            </h4>
+            <p>
+              Be careful if you alergic
             </p>
           </div>
         </li>
@@ -103,7 +143,25 @@
 		methods: {
 			getImg(uid) {
 				return '/images/' + uid + '.png';
-			}
+			},
+			havePenauts() {
+				return !!this.item.tags.find(item => item.includes('penauts'))
+			},
+			haveCoffeine() {
+				return !!this.item.tags.find(item => item.includes('coffein'))
+			},
+			haveHoney() {
+				return !!this.item.tags.find(item => item.includes('honey'))
+			},
+			haveGluten() {
+				return !!this.item.tags.find(item => item.includes('gluten'))
+			},
+			havePlastic() {
+				return !!this.item.tags.find(item => item.includes('plastic'))
+			},
+			haveAlcohol() {
+				return !!this.item.tags.find(item => item.includes('alcohol'))
+			},
 		}
 	}
 </script>
@@ -167,7 +225,7 @@
     margin: auto;
     img {
       max-width: 300px;
-      max-height: 300px;
+      max-height: 400px;
       object-fit: cover;
       margin: 0 auto;
       display: table;

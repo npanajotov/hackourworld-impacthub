@@ -39,9 +39,8 @@ export default new Vuex.Store({
 					description: "Lorem ipsum",
 					price: 60,
 					tags: [
-						"milk",
 						"sugar",
-						"aromas"
+						"gluten"
 					],
 					rating: 3.9,
 					vegan: false,
@@ -55,7 +54,7 @@ export default new Vuex.Store({
 					name: "Hobby - Hot sticks",
 					description: "Lofem ipsum",
 					price: 500,
-					tags: [],
+					tags: ['plastics'],
 					rating: 4.5,
 					vegan: false,
 					gmo: false,
@@ -166,11 +165,10 @@ export default new Vuex.Store({
 				state.products.item = response.data;
 			};
 
-			// state.socketUser = new WebSocket('ws://192.168.55.59:3000');
-			// state.socketUser.onmessage = (response) => {
-			// 	console.log(response);
-			// 	state.users.item = parseInt(response.data)
-			// }
+			state.socketUser = new WebSocket('ws://192.168.55.131:5000');
+			state.socketUser.onmessage = (response) => {
+				console.log(response);
+			}
 		},
 
 	},

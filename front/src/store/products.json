@@ -6,16 +6,11 @@
     price: 51.99,
     tags: [
       "coffein",
-      "water",
-      "taurin",
-      "calcium",
-      "carbon dioxide",
-      "preservative",
       "E150"
     ],
     rating: 5,
-    vegan: false,
-    gmo: false,
+    vegan: true,
+    gmo: true,
     organic: false,
     weight: "0.25l",
     made_in: "Serbia"
@@ -26,9 +21,8 @@
     description: "Lorem ipsum",
     price: 60,
     tags: [
-      "milk",
       "sugar",
-      "aromas"
+      "gluten"
     ],
     rating: 3.9,
     vegan: false,
@@ -76,8 +70,6 @@
     price: 250,
     tags: [
       "glycerin",
-      "liquidum",
-      "aqua",
       "alcohol"
     ],
     rating: 3.9,
