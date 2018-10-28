@@ -21,8 +21,9 @@ export default new Vuex.Store({
 	},
 	getters: {
 		product: state => {
-			let item = state.products.list.find(item => item.uid === state.products.item);
-			return item ? item : null;
+			// let item = state.products.list.find(item => item.uid === state.products.item);
+			// return item ? item : null;
+			return state.products.list[0];
 		}
 	},
 	mutations: {
@@ -33,11 +34,11 @@ export default new Vuex.Store({
 				state.products.item = parseInt(response.data)
 			};
 
-			state.socketUser = new WebSocket('ws://192.168.55.131:5000');
-			state.socketUser.onmessage = (response) => {
-				console.log(response);
-				state.users.item = parseInt(response.data)
-			}
+			// state.socketUser = new WebSocket('ws://192.168.55.59:3000');
+			// state.socketUser.onmessage = (response) => {
+			// 	console.log(response);
+			// 	state.users.item = parseInt(response.data)
+			// }
 		},
 
 	},
